@@ -1,0 +1,19 @@
+# 排除 PyInstaller 編譯暫存與打包結果（這兩個資料夾容量極大，絕不上傳）
+build/
+dist/
+*.spec
+
+# 排除 Python 執行時自動產生的快取快照
+__pycache__/
+*.pyc
+
+# 排除我們用來自動打包的除錯腳本
+make.py
+
+# 排除 Windows 系統暫存雜物
+.DS_Store
+Thumbs.db
+
+# 排除開發工具自動生成的超深層暫存區
+.cache/
+node_modules/
