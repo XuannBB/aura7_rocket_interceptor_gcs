@@ -15,6 +15,22 @@ The AURA 7" platform is engineered as a high-performance tactical observation an
 
 ---
 
+## 💎 Technical Core & Ground Station Features
+
+Unlike traditional visualization ground stations, this software serves as an advanced, physics-bounded **Optical Path Planner and Mission Simulator** that bridges high-fidelity aerospace dynamics with UAV cinematic tracking constraints:
+
+### 🚀 Core Simulation & Path Planning
+* **Integrated Optical Photography Path Planning**: The core engine solves the time-variant 3D coordinate matrices between the chasing UAV and the target rocket. It dynamically computes the optimal gimbal pitch/yaw vectors to ensure the target rocket stays locked within the center of the 4K optical sensor across the entire flight envelope.
+* **High-Fidelity Multi-Physics Analytical Core**: Rather than utilizing simplified linear assumptions, the software integrates real atmospheric density models, kinematic constraints, and aerodynamic drag coefficients to resolve tracking anomalies under maximum dynamic pressure (Max Q).
+* **UAV Performance & Inertia Co-Simulation**: The path-planning solver is closed-loop bound to the physical limits of the Aura 7" drone. It correlates aggressive target-chasing vectors directly against the real motor torque curves (Xnova 2812 1300KV), structural weight (1.90 kg AUW), and maximum available thrust profiles to ensure the generated trajectory is aerodynamically feasible and mathematically deterministic.
+
+### 💻 Ground Station Dashboard Capabilities
+* **Parameterized Component Architecture**: Features hardcoded mathematical scaling models aligned directly with the physical 1.90 kg payload inertia matrix for high-fidelity responses.
+* **Deterministic Trajectory Intercept Solver**: Real-time multi-physics dynamics computation engine evaluating tracking matrices via pre-loaded CSV data.
+* **Synchronized Telemetry HUD**: Interactive 3-axis attitude display, dual-battery voltage diagnostics, and multi-channel responsive kinematic graphs for real-time mission oversight.
+
+---
+
 ## 📊 UAV System Specifications
 
 | Parameter | Specification |
@@ -46,14 +62,6 @@ The AURA 7" platform is engineered as a high-performance tactical observation an
 | | Motors | Xnova 2812 Heavy Lift - 1300KV | 4 | Xnova |
 | **Payload** | Gimbal Controller | G3P 4K DV Stabilization Board | 1 | Align |
 | | Camera | G3P Pro 4K Optical Core | 1 | Align |
-
----
-
-## ⚡ Ground Station Core Features
-
-* **Parameterized Component Architect**: Hardcoded mathematical scaling models aligned directly with the physical 1.90 kg payload inertia matrix.
-* **Deterministic Trajectory Intercept Solver**: Real-time multi-physics dynamics computation engine evaluating tracking matrices via pre-loaded CSV data.
-* **Synchronized Telemetry HUD**: Interactive 3-axis attitude display, dual-battery voltage diagnostics, and multi-channel responsive kinematic graphs.
 
 ---
 
